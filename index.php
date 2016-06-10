@@ -60,11 +60,11 @@
   	
 <div id="form_wrapper">
   <h1>Cuidando mi Vehiculo</h1>
-  <h2>Mensaje de alerta cuando el vehiculo este en movimiento</h2>
+  <h2>Envio de mensajes de alerta inmediata ante robos y accidentes.</h2>
   <?php 
     include_once 'database.php';
-	$db = new DatabaseLayer();
-	$user_id = $db->getRegistrationId();
+		$db = new DatabaseLayer();
+		$user_id = $db->getRegistrationId();
   
    ?>	
 	<form>	
