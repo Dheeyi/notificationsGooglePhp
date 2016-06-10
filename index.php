@@ -12,21 +12,24 @@
     <style>
     
     body{
-    	background-color: #403f22;
+    	background-image: url("mapa.jpg");
+    	background-size: 490px;
+    	background-attachment: fixed;
+    	background-position: center; 
     }
     body #form_wrapper{
     	width:800px;
     	height:400px;
-    	margin:200px auto;
-    	border: 1px solid #FFCC00;
+    	margin:100px auto;
+    	background-color: #C1EABC;
     	text-align: center;
     }
     #form_wrapper > h1{
-    	color:#FFFFFF;
+    	rgba(30, 29, 33, 0.98);
     	text-align:center;
     }
     textarea{
-    	border: 2px solid #FFCC00;
+    	border: 2px solid #96c56f;
 		margin-bottom: 10px;			
 		text-align: center;
 		padding: 10px;
@@ -56,7 +59,8 @@
 <body>
   	
 <div id="form_wrapper">
-  <h1>GCM Push Notification Backend</h1>
+  <h1>Cuidando mi Vehiculo</h1>
+  <h2>Mensaje de alerta cuando el vehiculo este en movimiento</h2>
   <?php 
     include_once 'database.php';
 	$db = new DatabaseLayer();
@@ -65,8 +69,8 @@
    ?>	
 	<form>	
 		<input type="hidden" id="user_id" name="user_id" value="<?php echo $user_id ? $user_id : 0 ?>">			                                                      
-		<textarea rows="5" id="message" name="message" cols="45" placeholder="Write push notification message"></textarea> 
-		<p><a class="submitbutton submit-button"> Send data to GCM </a></p>
+		<textarea rows="5" id="message" name="message" cols="45" placeholder="Escriba el mensaje a enviar al dueno del vehiculo"></textarea> 
+		<p><a class="submitbutton submit-button"> Enviar Notificacion GCM </a></p>
 		
 		<!--<p><input type="submit"  value="submit" name="submit" id="submitbutton" /></p>-->
 	</form>
