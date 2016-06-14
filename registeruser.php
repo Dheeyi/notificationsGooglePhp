@@ -16,7 +16,7 @@ if(isset($_POST['nombre'])){
 	$email = $_POST['email'];
 	$imdei = $_POST['imei'];
     
-    $UserRegistrationClass->saveNewUser($nombre,$apellido,$ci,$usuario,$password,$email,$imdei);
+    $UserRegistrationClass->saveNewUser($nombre, $apellido, $ci, $usuario, $password, $email, $imdei);
 }
 
 ?>

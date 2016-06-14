@@ -14,9 +14,8 @@ include_once 'db.php';
 	
 	public function newUserResgiter($nombre,$apellido,$ci,$usuario,$password,$email,$imdei){
 		
-		$com = new DbConnect();	
-		$query_search = "insert into personas(nombre,dni,telefono,email) values ('".$nombre."','".$dni."','".$telefono."','".$email."')";
-		$sql = "insert into users (ci, nombre, apellido, usuario, password, email, imei) values ('$ci', '$nombre','$apellido','$ci','$usuario','$password', '$email', '$imdei')";			
+		$com = new DbConnect();
+		$sql = "insert into users (ci, nombre, apellido, usuario, password, email, imei) values ('$ci', '$nombre','$apellido','$usuario','$password', '$email', '$imdei')";			
 	    mysqli_query($com->getDb(), $sql);
 	}
 	
