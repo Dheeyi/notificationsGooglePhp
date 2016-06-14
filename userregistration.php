@@ -21,6 +21,12 @@ class UserRegistrationFromDevice{
  
         $severNotification->sendPushNotificationToGCMSever($registatoin_ids, $message);
 	}
+	
+	public function saveNewUser($nombre,$apellido,$ci,$usuario,$password,$email,$imdei){
+
+		$db = new DatabaseLayer();
+		$db->newUserResgiter($nombre,$apellido,$ci,$usuario,$password,$email,$imdei);
+	}
 }
 
 ?>
