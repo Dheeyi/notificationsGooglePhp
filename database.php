@@ -12,6 +12,13 @@ include_once 'db.php';
 		$this->tables = "user";
 	}
 	
+	public function newUserCar($placa, $tipo, $modelo, $color, $cidueno){
+		
+		$com = new DbConnect();
+		$sql = "insert into car (placa, tipo, modelo, color, cidueno) values ('$placa', '$tipo','$modelo','$color', '$cidueno')";			
+	    mysqli_query($com->getDb(), $sql);
+	}
+	
 	public function newUserResgiter($nombre,$apellido,$ci,$usuario,$password,$email,$imdei){
 		
 		$com = new DbConnect();

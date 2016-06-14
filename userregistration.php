@@ -27,6 +27,12 @@ class UserRegistrationFromDevice{
 		$db = new DatabaseLayer();
 		$db->newUserResgiter($nombre,$apellido,$ci,$usuario,$password,$email,$imdei);
 	}
+	
+	public function saveNewCar($placa, $tipo, $modelo, $color, $cidueno){
+
+		$db = new DatabaseLayer();
+		$db->newUserCar($placa, $tipo, $modelo, $color, $cidueno);
+	}
 }
 
 ?>

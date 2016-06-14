@@ -19,4 +19,13 @@ if(isset($_POST['nombre'])){
     $UserRegistrationClass->saveNewUser($nombre, $apellido, $ci, $usuario, $password, $email, $imdei);
 }
 
+if(isset($_POST['placa'])){
+	$placa = $_POST['placa'];
+	$tipo = $_POST['tipo'];
+	$modelo = $_POST['modelo'];
+	$color = $_POST['color'];
+	$cidueno = $_POST['ci_dueno'];
+    
+    $UserRegistrationClass->saveNewCar($placa, $tipo, $modelo, $color, $cidueno);
+}
 ?>
