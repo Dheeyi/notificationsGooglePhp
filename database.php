@@ -15,7 +15,7 @@ include_once 'db.php';
 	public function newUserCar($placa, $tipo, $modelo, $color, $cidueno){
 		
 		$com = new DbConnect();
-		$sql = "insert into car (placa, tipo, modelo, color, cidueno) values ('$placa', '$tipo','$modelo','$color', '$cidueno')";			
+		$sql = "insert into car (placa, tipo, modelo, color, ci_dueno) values ('$placa', '$tipo','$modelo','$color', '$cidueno')";			
 	    mysqli_query($com->getDb(), $sql);
 	}
 	
