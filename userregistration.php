@@ -14,12 +14,12 @@ class UserRegistrationFromDevice{
 		$db = new DatabaseLayer();
 		$db->insertUserRegistrationId($user_registration_id);
 		
-		$registatoin_ids = array($user_registration_id);
-        $message = array("GCM Push" => "Testing Testing");
+		// $registatoin_ids = array($user_registration_id);
+  //      $message = array("GCM Push" => "Testing Testing");
 		
-		$severNotification = new SendNotification();
+		// $severNotification = new SendNotification();
  
-        $severNotification->sendPushNotificationToGCMSever($registatoin_ids, $message);
+  //      $severNotification->sendPushNotificationToGCMSever($registatoin_ids, $message);
 	}
 	
 	public function saveNewUser($nombre,$apellido,$ci,$usuario,$password,$email,$imdei){
