@@ -5,6 +5,6 @@
  define("DB_PASSWORD", "sample");
  define("DB_NAME", "vehiase");
 
- define("GOOGLE_API_KEY", "AIzaSyA_oMAuR-qjPDOlxut55OnMRnXqgchxAjM");
+ define("GOOGLE_API_KEY", "AIzaSyDlP6aT8GciwC8cFWZjxhaXvJzTTmrOIlo");
 
 ?>
