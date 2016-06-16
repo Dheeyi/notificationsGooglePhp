@@ -11,7 +11,7 @@
 		
 		include_once 'config.php';
 		$path_to_gmc_server = 'https://android.googleapis.com/gcm/send';
-		
+		$message = array('message' => $message['GCM Notice']);
 		$fields = array(
             'registration_ids' => $registatoin_ids,
             'data' => $message,

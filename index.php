@@ -6,8 +6,7 @@
     <title>GCM Push Notification</title>  
     <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
     <script language="JavaScript" type="text/javascript" src="jquery-2.2.0.min.js"></script> 
-    <script language="JavaScript" type="text/javascript" src="js.js"></script> 
-   
+    <script type="text/javascript" src="js.js"></script>
     
     <style>
     
@@ -45,11 +44,9 @@
 		font-weight: bold;
 	}
 	.submit-button{
-		width:96px;
-		height: 60px;
-		background-color: #FFCC00;
-		border: 2px solid #000000;
-		margin-top:24px;
+		width:196px;
+		background-color: #ffcc00;
+		border: 2px solid #96c56f;
 		padding:12px;
 	}
 	</style>
@@ -70,9 +67,9 @@
 	<form>	
 		<input type="hidden" id="user_id" name="user_id" value="<?php echo $user_id ? $user_id : 0 ?>">			                                                      
 		<textarea rows="5" id="message" name="message" cols="45" placeholder="Escriba el mensaje a enviar al dueno del vehiculo"></textarea> 
-		<p><a class="submitbutton submit-button"> Enviar Notificacion GCM </a></p>
-		
-		<!--<p><input type="submit"  value="submit" name="submit" id="submitbutton" /></p>-->
+		<!--<p><a class="submit-button"> Enviar Notificacion GCM </a></p>-->
+		<p><button class="submitbutton submit-button">Send Notification</button><p>
+		<!--<p><input type="submit"  class="submitbutton submit-button" value="GCM" name="submit" id="submitbutton" /></p>-->
 	</form>
 </div>
 

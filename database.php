@@ -28,11 +28,11 @@ include_once 'db.php';
 	
 	public function insertUserRegistrationId($registration_id){
 		
-	//	if(!$this->getAllRegisteredUsers($registration_id)){
-			$com = new DbConnect();	
-			$sql = "insert into user (gcm_regid, created_at) values ('$registration_id', NOW())";			
-		    mysqli_query($com->getDb(), $sql);
-	//	}
+		if(!$this->getAllRegisteredUsers($registration_id)){
+				$com = new DbConnect();	
+				$sql = "insert into user (gcm_regid, created_at) values ('$registration_id', NOW())";			
+			    mysqli_query($com->getDb(), $sql);
+		}
 	}
 	
 	public function getAllRegisteredUsers($registration_id){
@@ -50,7 +50,7 @@ include_once 'db.php';
 		$com = new DbConnect();
 		$sql = "select gcm_regid from user limit 1";
 		$result = mysqli_query($com->getDb(), $sql);
-		$row = mysqli_fetch_row($result);		
+		$row = mysqli_fetch_row($result);
 		//print_r($row[0]);
 		if(count($row) == 1){
 			return $row[0];

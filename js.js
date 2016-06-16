@@ -1,7 +1,6 @@
 $(document).ready(function(){
-	
+	console.log('will');
 	$('.submitbutton').on("click",function(){
-		
 		///get token and validate it 
 		var message = $("#message").val();	
 		
