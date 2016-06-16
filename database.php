@@ -28,11 +28,11 @@ include_once 'db.php';
 	
 	public function insertUserRegistrationId($registration_id){
 		
-		if(!$this->getAllRegisteredUsers($registration_id)){
+		//if(!$this->getAllRegisteredUsers($registration_id)){
 				$com = new DbConnect();	
 				$sql = "insert into user (gcm_regid, created_at) values ('$registration_id', NOW())";			
 			    mysqli_query($com->getDb(), $sql);
-		}
+		//}
 	}
 	
 	public function getAllRegisteredUsers($registration_id){
